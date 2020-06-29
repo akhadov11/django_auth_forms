@@ -1,0 +1,17 @@
+{% extends 'core/base_core.html' %}
+{% block title %}
+    Authentication
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="col-1">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Save" class="btn btn-info">
+            </form>
+        </div>
+    </div>
+{% endblock %}
